@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 import  './NavBar.css'
-import homeImg from '../../public/home.svg'
 
 function NavBar(){
     return (
