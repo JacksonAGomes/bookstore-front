@@ -1,27 +1,27 @@
-.navbar {
-    display: flex;
-    flex-direction: column;
-    background-color: #ed0a0a;
-    width: 20vh;
-    height: 80vh;
+.top {
+    background-color: #5c5555;
+    color: #fff;
+    height: 50px;
+    margin-top: -20px;
+    text-align: right;    
 }
 
-.list {
+.topLogin {
     list-style: none;
     align-items: center;
 }
 
-.item {
+.itemLogin {
     font-weight: bold;
     margin: 20px 0 50px;
 }
 
-.item a {
+.itemLogin a {
     color: #fff;
     text-decoration: none;
 }
 
-.item a:hover {
+.itemLogin a:hover {
     color: #1e1e1f;
     text-decoration: none;
 }

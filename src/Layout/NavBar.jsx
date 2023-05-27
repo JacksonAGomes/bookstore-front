@@ -6,10 +6,7 @@ function NavBar(){
     <nav className="navbar">
         <ul className="list">
             <li className="item">
-                <Link to="/">HOME</Link>
-            </li>
-            <li className="item">
-                <Link to="/login">LOGIN</Link>
+                <Link to="/home">HOME</Link>
             </li>
             <li className="item">
                 <Link to="/clients">CLIENTES</Link>
