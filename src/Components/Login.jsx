@@ -8,6 +8,7 @@ import { LoginContexto } from '../LoginContexto';
 function Login() {
     const [clicked, setClicked] = useState (false);
     const user = useContext(LoginContexto);
+    var userLogged = {email: "jacksonanderson@gmail.com", nome:"Jackson Anderson", id:"1"}
 
     return   <>
                 <h1>Login</h1>
