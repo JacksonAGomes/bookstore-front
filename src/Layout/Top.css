@@ -1,9 +1,8 @@
 .top {
     background-color: #5c5555;
     color: #fff;
-    height: 50px;
-    margin-top: -20px;
-    text-align: right;    
+    height: 12vh;
+    text-align: right;  
 }
 
 .topLogin {

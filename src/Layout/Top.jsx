@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom'
 import  './Top.css'
 import { useContext } from 'react';
-import { LoginContexto } from '../LoginContexto';
+import { LoginContexto } from '../Context/LoginContexto';
 
 function Top(){
-    const user = useContext(LoginContexto);
+    const {user} = useContext(LoginContexto);
 
     return (
         <>

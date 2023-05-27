@@ -8,11 +8,11 @@ import Purchase from "./Components/purchases/Purchase";
 function Rotas() {
     return (
     <Routes>
-        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/clients" element={<Client />} />
         <Route path="/books" element={<Book />} />
-        <Route path="/purchase" element={<Purchase />} />
+        <Route path="/purchases" element={<Purchase />} />
     </Routes>
     )
   }

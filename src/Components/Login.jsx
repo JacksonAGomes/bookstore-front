@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import { Navigate } from "react-router-dom"
 import { useContext } from 'react';
-import { LoginContexto } from '../LoginContexto';
+import { LoginContexto } from '../Context/LoginContexto';
 
 
 
 function Login() {
     const [clicked, setClicked] = useState (false);
-    const user = useContext(LoginContexto);
+    const {setUser} = useContext(LoginContexto);
     var userLogged = {email: "jacksonanderson@gmail.com", nome:"Jackson Anderson", id:"1"}
 
     return   <>
@@ -17,14 +17,12 @@ function Login() {
                 <p>Digite sua senha</p>
                 <input type="password" name="" id="2" />
                 <button onClick={()=>{ 
-                    setClicked(true)
-                    user.email = "jacksonanderson@gmail.com"
-                    user.id = "1"
-                    user.nome = "Jackson Anderson"
+                    setClicked(true);
+                    setUser(userLogged);
                 }}>Logar</button>
                 {
                 clicked && 
-                    <Navigate replace to="/home"/>            
+                    <Navigate replace to="/purchases"/>            
                 }
             </>
   }

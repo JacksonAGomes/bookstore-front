@@ -6,20 +6,27 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import Footer from './Layout/Footer';
 import Rotas from './Rotas';
-import { LoginContexto } from './LoginContexto';
+import { LoginProvider } from './Context/LoginContexto';
 import Top from './Layout/Top';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <LoginContexto.Provider value={{nome:"", email:"", id:""}}>
   <BrowserRouter>
   <React.StrictMode>
+  <LoginProvider>
+  <div className='container'>
     <Top />
-    <NavBar />
-    <Rotas />
+
+    <div className='content'>
+      <NavBar />
+      <Rotas />
+    </div>
+    
     <Footer />
+  </div>
+
+  </LoginProvider>
   </React.StrictMode>
   </BrowserRouter>
-  </LoginContexto.Provider>
   );
 reportWebVitals();

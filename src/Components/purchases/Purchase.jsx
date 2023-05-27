@@ -1,18 +1,18 @@
 import { useContext } from 'react';
-import { LoginContexto } from '../../LoginContexto';
+import { LoginContexto } from '../../Context/LoginContexto';
 import { Link } from 'react-router-dom'
 
 
 
 function Purchase() {
-    const user = useContext(LoginContexto);
+    const {user} = useContext(LoginContexto);
 
     return <>
     {
-        user.id != "" && <h1>Compra</h1>
+        user.id !== "" && <h1>Compra</h1>
     }
     {
-        user.id == "" && 
+        user.id === "" && 
         <div>
         <h1>Para acessar essa pagina, realize seu</h1>
         <ul >
