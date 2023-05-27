@@ -14,8 +14,11 @@
 .item {
     font-weight: bold;
     margin: 20px 0 50px;
+}
 
-  
+.item img {
+    height: 24px;
+    width: 24px;
 }
 
 .item a {

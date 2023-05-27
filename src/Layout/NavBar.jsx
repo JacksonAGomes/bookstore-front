@@ -7,8 +7,8 @@ function NavBar(){
         <ul className="list">
             <li className="item">
                 <Link to="/">
+                <img src='/home.svg' alt='home icon' />
                     HOME
-                    <img src='/home.svg' alt='home icon' />
                 </Link>
             </li>
             <li className="item">
