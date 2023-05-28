@@ -8,22 +8,13 @@ function Top(){
 
     return (
         <>
-        { user.id === "" &&
 
-            <nav className="top">
-                <ul className="topLogin">
-                    <li className="itemLogin">
-                        <Link to="/login">LOGIN</Link>
-                    </li>
-                </ul>
-            </nav>
-        }
-        {
-            user.id !== "" && 
             <div className='top'>
+            {
+            user.id !== "" && 
                 <span className='message'>Olá, {user.nome}</span>
+            }
             </div>
-        }
         </>
 
     )

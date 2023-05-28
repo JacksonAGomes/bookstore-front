@@ -11,6 +11,9 @@ function NavBar(){
                     HOME
                 </Link>
             </li>
+            <li className="itemLogin">
+                <Link to="/login">LOGIN</Link>
+            </li>
             <li className="item">
                 <Link to="/clients">
                 <img src='/user.svg' alt='user icon' />    
