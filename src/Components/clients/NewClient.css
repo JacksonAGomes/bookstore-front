@@ -6,6 +6,7 @@
     margin-left: 20vh;
     margin-top: 5vh;
     overflow-y: auto;
+    display: flex;
     flex-direction: column;
 }
 
