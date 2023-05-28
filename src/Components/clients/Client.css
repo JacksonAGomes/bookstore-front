@@ -1,7 +1,52 @@
-#bSave{
+.clientList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+  }
+  
+  #bSave {
     background-color: red;
-    color: white; 
+    color: white;
     border-radius: 5px;
     height: 38px;
     width: 80px;
-}
+  }
+  
+  .tabela {
+    width: 80vw;
+    height: 70vh;
+    overflow-y: auto;
+    padding-left: 10vw;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .itemList th,
+  .itemList td {
+    padding: 8px;
+    border-bottom: 1px solid black;
+  }
+  
+  .itemList th {
+    background-color: #f2f2f2;
+    text-align: left;
+    font-weight: bold;
+  }
+  
+  .itemList tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .itemList tr:hover {
+    background-color: #e9e9e9;
+  }
+  
