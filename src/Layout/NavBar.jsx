@@ -12,13 +12,22 @@ function NavBar(){
                 </Link>
             </li>
             <li className="item">
-                <Link to="/clients">CLIENTES</Link>
+                <Link to="/clients">
+                <img src='/user.svg' alt='user icon' />    
+                    CLIENTES
+                </Link>
             </li>
             <li className="item">
-                <Link to="/books">LIVROS</Link>
+                <Link to="/books">
+                <img src='/books.svg' alt='book icon' /> 
+                    LIVROS
+                </Link>
             </li>
             <li className="item">
-                <Link to="/purchases">COMPRAS</Link>
+                <Link to="/purchases">
+                <img src='/shop.svg' alt='shop icon' />
+                    COMPRAS
+                </Link>
             </li>
         </ul>
     </nav>
