@@ -1,6 +1,25 @@
 .footer {
-    background-color: #5c5555;
+    background-color: #ebe5e5;
     color: #fff;
     text-align: right;
-    height: 8vh;    
+    height: 8vh;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.text {
+    margin-right: 30px;
+    font-weight: bold;
+}
+
+.footer:before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: -1;
 }

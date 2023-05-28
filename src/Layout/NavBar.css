@@ -2,8 +2,11 @@
     display: flex;
     flex-direction: column;
     background-color: #ed0a0a;
-    width: 40vh;
+    width: 20vh;
     height: 80vh;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 8px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 0;
 }
 
 .list {
@@ -14,11 +17,14 @@
 .item {
     font-weight: bold;
     margin: 20px 0 50px;
+    padding-left: 10px;
 }
 
 .item img {
     height: 24px;
     width: 24px;
+    padding-top: 5px;
+    margin-right: 10px;
 }
 
 .item a {
@@ -29,4 +35,15 @@
 .item a:hover {
     color: #1e1e1f;
     text-decoration: none;
+}
+
+.navbar:before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: -1;
 }

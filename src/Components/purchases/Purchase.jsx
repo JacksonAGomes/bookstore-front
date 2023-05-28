@@ -13,13 +13,13 @@ function Purchase() {
     }
     {
         user.id === "" && 
-        <div>
-        <h1>Para acessar essa pagina, realize seu</h1>
-        <ul >
-        <li >
-            <Link to="/login"><strong>LOGIN</strong></Link>
-        </li>
-        </ul>   
+        <div className='login'>
+            <h1>Para acessar essa pagina, realize seu</h1>
+            <ul >
+                <li >
+                    <Link to="/login"><strong>LOGIN</strong></Link>
+                </li>
+            </ul>   
         </div>     
     }
     </>

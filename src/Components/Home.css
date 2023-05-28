@@ -1,7 +1,9 @@
 .home {
-    width: 50vw;
-    height: 50vh;
+    width: 70vw;
+    height: 70vh;
     border: 1px solid red;
-    
+    margin-right: 20vh;
+    margin-left: 20vh;
+    margin-top: 5vh;
     overflow-y: auto;
 }

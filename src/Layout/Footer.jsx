@@ -3,7 +3,7 @@ import './Footer.css'
 function Footer(){
     return(
         <footer className='footer'>
-            Desenvolvido por Jackson, Marta e Irla
+            <div className='text'>Desenvolvido por Jackson, Marta e Irla</div>
         </footer>
         )
 }

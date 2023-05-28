@@ -1,0 +1,35 @@
+.client{
+    width: 70vw;
+    height: 70vh;
+    border: 1px solid red;
+    margin-right: 20vh;
+    margin-left: 20vh;
+    margin-top: 5vh;
+    overflow-y: auto;
+    flex-direction: column;
+}
+
+.input{
+    height: 38px;
+    width: 49vw;
+}
+
+.buttons{
+    text-align: center;
+}
+
+#bSave{
+    background-color: red;
+    color: white; 
+    border-radius: 5px;
+    height: 38px;
+    width: 80px;
+}
+
+#bCancel{
+    background-color: black;
+    color: white; 
+    border-radius: 5px;
+    height: 38px;
+    width: 80px;
+}

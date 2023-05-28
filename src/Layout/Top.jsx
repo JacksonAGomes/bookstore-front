@@ -21,7 +21,7 @@ function Top(){
         {
             user.id !== "" && 
             <div className='top'>
-                <span >Olá, {user.nome}</span>
+                <span className='message'>Olá, {user.nome}</span>
             </div>
         }
         </>

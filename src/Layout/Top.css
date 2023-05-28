@@ -1,8 +1,15 @@
 .top {
-    background-color: #5c5555;
+    background-color: #ebe5e5;
     color: #fff;
     height: 12vh;
-    text-align: right;  
+    text-align: right;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.top ul {
+    margin-right: 30px;
 }
 
 .topLogin {
@@ -15,6 +22,11 @@
     margin: 20px 0 50px;
 }
 
+.message {
+    font-weight: bold;
+    margin: 50px;
+}
+
 .itemLogin a {
     color: #fff;
     text-decoration: none;
@@ -23,4 +35,13 @@
 .itemLogin a:hover {
     color: #1e1e1f;
     text-decoration: none;
+}
+
+.top:before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
 }
