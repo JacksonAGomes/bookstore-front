@@ -33,7 +33,7 @@
 }
 
 .itemLogin a:hover {
-    color: #1e1e1f;
+    color: rgb(30, 30, 31);
     text-decoration: none;
 }
 
@@ -45,3 +45,17 @@
     right: -5px;
     bottom: -5px;
 }
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 10px;
+  }
+  
+  .logo img {
+    height: 50px;
+    width: 50px;
+    padding-top: 5px;
+    margin-right: 10px;
+  }

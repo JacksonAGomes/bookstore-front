@@ -7,15 +7,18 @@ function Top(){
     const {user} = useContext(LoginContexto);
 
     return (
-        <>
+        <div className='top'>
+            <div className='logo'>
+                <img src='/logo2.svg' alt='logo1 icon'/>
+            </div>
 
-            <div className='top'>
+            <div>
             {
             user.id !== "" && 
                 <span className='message'>Olá, {user.nome}</span>
             }
             </div>
-        </>
+        </div>
 
     )
 }
