@@ -15,11 +15,6 @@ function Client() {
 
   return (
     <div className='clientList'>
-    <div className="buttons">
-      <button onClick={() => {
-        setClicked(true);
-      }} id="bSave">Novo Cliente</button>
-
       <div className='tabela'>
           <table>
             <thead>
@@ -45,6 +40,10 @@ function Client() {
           </table>
       </div>
 
+    <div className="buttons">
+      <button onClick={() => {
+        setClicked(true);
+      }} id="bNewCliente">Novo Cliente</button>
       {clicked && <Navigate replace to="/clients/new"/>}
     </div>
     </div>

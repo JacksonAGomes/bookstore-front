@@ -1,13 +1,12 @@
 .client{
     width: 70vw;
     height: 70vh;
-    border: 1px solid red;
-    margin-right: 20vh;
-    margin-left: 20vh;
-    margin-top: 5vh;
+    margin: 5vh auto;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    padding-left: 10vw;
 }
 
 .input{
@@ -15,9 +14,13 @@
     width: 49vw;
 }
 
-.buttons{
-    text-align: center;
-}
+.buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px; 
+    margin-top: 10px;
+    margin-left: 5px;
+  }
 
 #bSave{
     background-color: red;
@@ -33,4 +36,8 @@
     border-radius: 5px;
     height: 38px;
     width: 80px;
+}
+
+#nClient{
+    margin-left: 5px;
 }

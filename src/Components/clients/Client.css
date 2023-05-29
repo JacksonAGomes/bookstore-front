@@ -7,15 +7,16 @@
   .buttons {
     display: flex;
     flex-direction: column;
-    margin: 20px;
+    gap: 10px;
+    margin-top: 10px;
   }
   
-  #bSave {
+  #bNewCliente{
     background-color: red;
     color: white;
     border-radius: 5px;
     height: 38px;
-    width: 80px;
+    width: 110px;
   }
   
   .tabela {

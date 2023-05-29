@@ -13,11 +13,14 @@ function Login() {
 
     return (
         <div className='login'>
-             <h1>Login</h1>
-                <p>Digite seu email</p>
-                <input type="email" name="" id="1" className='input'/>
-                <p>Digite sua senha</p>
-                <input type="password" name="" id="2" className='input'/>
+             <h1 className='text1'>Login</h1>
+
+                <p className='text2'>Digite seu email</p>
+                <input type="email" placeholder="Email:" name="" id="1" className='input'/>
+
+                <p className='text3'>Digite sua senha</p>
+                <input type="password" placeholder="Senha:" name="" id="2" className='input'/>
+
                 <button onClick={()=>{ 
                     setClicked(true);
                     setUser(userLogged);
