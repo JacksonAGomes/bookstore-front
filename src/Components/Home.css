@@ -1,9 +1,26 @@
 .home {
-    width: 70vw;
-    height: 70vh;
-    border: 1px solid red;
-    margin-right: 20vh;
-    margin-left: 20vh;
-    margin-top: 5vh;
-    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    height: 50vh;
+    perspective: 800px;
+    margin: 5vh auto;
+  }
+
+  .fixMessage {
+    color: rgb(199, 0, 0) !important;
+  }
+  
+  
+  .home h1 {
+    font-size: 36px;
+    text-align: center;
+    color: #333;
+    transform: translateZ(100px);
+  }
+
+.linkStyle{
+    color: red;
 }
