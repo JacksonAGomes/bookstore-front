@@ -2,6 +2,8 @@ import { useState } from "react";
 import './NewClient.css'
 import { Navigate } from "react-router-dom"
 import axios from "axios";
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function NewCLient() {
   const [clicked, setClicked] = useState(false);
@@ -16,11 +18,16 @@ function NewCLient() {
   const saveUser = () => {
     axios.post('http://localhost:8080/clients', user)
       .then(response => {
-        console.log('Usuário salvo com sucesso:', response.data);
+        toast.success('Cliente salvo com sucesso!', {
+          position: toast.POSITION.BOTTOM_RIGHT
+        });
+      setTimeout(() => {
         setClicked(true);
-      })
+      }, 2000);      })
       .catch(error => {
-        console.error('Erro ao salvar usuário:', error);
+        toast.error('Erro, verifique os dados e tente novamente', {
+          position: toast.POSITION.BOTTOM_RIGHT
+        });
       });
   }
 
@@ -64,25 +71,24 @@ function NewCLient() {
         value={user.telephone}
         onChange={e => setUser({ ...user, telephone: e.target.value })}
       />
-      <select
+      <input
+        type="text"
+        placeholder="Gênero:"
+        name="gender"
+        id="5"
         className="input"
         value={user.gender}
         onChange={e => setUser({ ...user, gender: e.target.value })}
-      >
-        <option id='0' value='0' disabled selected>
-          Selecione seu gênero
-        </option>
-        <option id='1' value="masculino">Masculino</option>
-        <option id='2' value="feminino">Feminino</option>
-        <option id='3' value="outro">Outro</option>
-      </select>
+      />
 
       <div className="buttons">
-        <button onClick={() => saveUser(user)} id="bSave">Salvar</button>
+        <button onClick={saveUser} id="bSave">Salvar</button>
         <button onClick={() => setClicked(true)} id="bCancel">Cancelar</button>
       </div>
 
       {clicked && <Navigate replace to="/clients" />}
+
+      <ToastContainer />
     </div>
   )
 }
