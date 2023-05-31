@@ -2,6 +2,8 @@ import './Client.css'
 import { Navigate } from "react-router-dom"
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom'
+
 
 function Client() {
   const [clicked, setClicked] = useState(false);
@@ -34,6 +36,7 @@ function Client() {
                   <td>{client.age}</td>
                   <td>{client.gender}</td>
                   <td>{client.telephone}</td>
+                  <td><Link to={`/clients/${client.id}`}>EDIT</Link></td>
                 </tr>
               ))}
             </tbody>
