@@ -26,6 +26,8 @@ function Client() {
                 <th>Idade</th>
                 <th>Gênero</th>
                 <th>Telefone</th>
+                <th></th>
+                <th></th>
               </tr>
             </thead>
             <tbody>
@@ -36,7 +38,8 @@ function Client() {
                   <td>{client.age}</td>
                   <td>{client.gender}</td>
                   <td>{client.telephone}</td>
-                  <td><Link to={`/clients/${client.id}`}>EDIT</Link></td>
+                  <td><Link to={`/clients/${client.uuid}`}>EDIT</Link></td>
+                  <td><Link to={`/clients/${client.uuid}/delete`}>DEL</Link></td>
                 </tr>
               ))}
             </tbody>
