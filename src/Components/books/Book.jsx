@@ -23,7 +23,6 @@ function Book() {
                         <th>Título</th>
                         <th>Sinopse</th>
                         <th>ISBN</th>
-                        <th>Data de publicação</th>
                         <th>Preço</th>
                         <th>Quantidade em estoque</th>
                         <th>Nome do autor</th>
