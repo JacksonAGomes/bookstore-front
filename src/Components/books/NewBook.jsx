@@ -11,7 +11,6 @@ function NewBook(){
       title: "",
       synopsis: "",
       isbn: "",
-      publicationYear: "",
       price: "",
       quantityInStock: "",
       authorName: ""
@@ -65,16 +64,6 @@ return(
          className="input"
          value={books.isbn}
          onChange={e => setBooks({...books, isbn: e.target.value})}
-        />
-
-        <input 
-         type="date"
-         placeholder="Data de publicação:"
-         name="publicationYear"
-         id="4"
-         className="input"
-         value={books.publicationYear}
-         onChange={e => setBooks({...books, publicationYear: e.target.value})}
         />
 
         <input 

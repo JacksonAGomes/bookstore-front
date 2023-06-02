@@ -8,6 +8,8 @@ import NewCLient from "./Components/clients/NewClient";
 import EditClient from "./Components/clients/EditClient";
 import NewBook from "./Components/books/NewBook";
 import EditBook from "./Components/books/EditBook";
+import DeleteClient from "./Components/clients/DeleteClient";
+import DeleteBook from "./Components/books/DeleteBook";
 
 function Rotas() {
     return (
@@ -17,9 +19,11 @@ function Rotas() {
         <Route path="/clients" element={<Client />} />
         <Route path="/clients/new" element={<NewCLient />} />
         <Route path="/clients/:clientId" element={<EditClient />} />
+        <Route path="/clients/:clientId/delete" element={<DeleteClient />} />
         <Route path="/books" element={<Book />} />
         <Route path="/books/new" element={<NewBook />} />
         <Route path="/books/:bookId" element={<EditBook />} />
+        <Route path="/books/:bookId/delete" element={<DeleteBook />} />
         <Route path="/purchases" element={<Purchase />} />
         <Route path="/*" element={<Home />} />
     </Routes>

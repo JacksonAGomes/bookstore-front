@@ -5,7 +5,7 @@ import axios from "axios";
 
 
 
-function EditBook(){
+function DeleteBook(){
 
     const { bookId } = useParams();
     const [clicked, setClicked] = useState(false);
@@ -35,10 +35,10 @@ function EditBook(){
     obterLivro();
 }, []);
 
-const updateBook = () => {
-    axios.put(`http://localhost:8080/books/${bookId}`, books)
+const deleteBook = () => {
+    axios.delete(`http://localhost:8080/books/${bookId}`)
       .then(response => {
-        toast.success('Cliente salvo com sucesso!', {
+        toast.success('Livro deletado com sucesso!', {
           position: toast.POSITION.BOTTOM_RIGHT
         });
         setTimeout(() => {
@@ -46,7 +46,7 @@ const updateBook = () => {
         }, 2000);
       })
       .catch(error => {
-        toast.error('Erro, verifique os dados e tente novamente', {
+        toast.error('Não foi possível deletar', {
           position: toast.POSITION.BOTTOM_RIGHT
         });
       });
@@ -54,13 +54,14 @@ const updateBook = () => {
 
 return (
     <div>
-        <h1>Novo Livro</h1>
+        <h1>Deseja deletar?</h1>
 
         <input 
          type="name" 
          placeholder="Titulo:"
          name="title"
          id="1"
+         disabled
          className="input"
          value={books.title}
          onChange={ e => setBooks({...books, title: e.target.value })}
@@ -71,6 +72,7 @@ return (
          placeholder="Sinopse:"
          name="synopsis"
          id="2"
+         disabled
          className="input"
          value={books.synopsis}
          onChange={e => setBooks({...books, synopsis: e.target.value})}
@@ -81,6 +83,7 @@ return (
          placeholder="ISBN:"
          name="isbn"
          id="3"
+         disabled
          className="input"
          value={books.isbn}
          onChange={e => setBooks({...books, isbn: e.target.value})}
@@ -91,6 +94,7 @@ return (
          placeholder="Preço"
          name="price"
          id="5"
+         disabled
          className="input"
          value={books.price}
          onChange={e => setBooks({...books, price: e.target.value})}
@@ -101,6 +105,7 @@ return (
          placeholder="Quantidade em estoque:"
          name="quantityInStock"
          id="6"
+         disabled
          className="input"
          value={books.quantityInStock}
          onChange={e => setBooks({...books, quantityInStock: e.target.value})}
@@ -111,13 +116,14 @@ return (
          placeholder="Autor"
          name="authorName"
          id="7"
+         disabled
          className="input"
          value={books.authorName}
          onChange={e => setBooks({...books, authorName: e.target.value})}
         />
 
         <div className="buttons">
-            <button onClick={updateBook} id="bSave">Salvar</button>
+            <button onClick={deleteBook} id="bSave">Deletar</button>
             <button onClick={() => setClicked(true)} id="bCancel">Cancelar</button>
         </div>
 
@@ -130,4 +136,4 @@ return (
 
 
 }
-export default EditBook;
+export default DeleteBook;

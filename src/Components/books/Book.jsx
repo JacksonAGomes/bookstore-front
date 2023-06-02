@@ -37,7 +37,6 @@ function Book() {
                             <td>{book.title}</td>
                             <td>{book.synopsis}</td>
                             <td>{book.isbn}</td>
-                            <td>{book.publicationYear.split('T')[0]}</td>
                             <td>{book.price}</td>
                             <td>{book.quantityInStock}</td>
                             <td>{book.authorName}</td>
