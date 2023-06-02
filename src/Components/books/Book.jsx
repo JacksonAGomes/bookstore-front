@@ -59,7 +59,7 @@ function Book() {
             <div className="buttons">
                 <button onClick={() => {
                     setClicked(true);
-                }} id="bNewBook" > Novo Livro</button>
+                }} id="bNewBook" >Novo Livro</button>
                 {clicked && <Navigate replace to="/books/new"/>}
             </div>                
 

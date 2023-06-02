@@ -63,7 +63,8 @@ return (
          name="title"
          id="1"
          className="input"
-        onChange={ e => setBooks({...books, title: e.target.value })}
+         value={books.title}
+         onChange={ e => setBooks({...books, title: e.target.value })}
         />
 
         <input 
@@ -72,6 +73,7 @@ return (
          name="synopsis"
          id="2"
          className="input"
+         value={books.synopsis}
          onChange={e => setBooks({...books, synopsis: e.target.value})}
         />
 
@@ -81,6 +83,7 @@ return (
          name="isbn"
          id="3"
          className="input"
+         value={books.isbn}
          onChange={e => setBooks({...books, isbn: e.target.value})}
         />
 
@@ -90,6 +93,7 @@ return (
          name="publicationYear"
          id="4"
          className="input"
+         value={books.publicationYear}
          onChange={e => setBooks({...books, publicationYear: e.target.value})}
         />
 
@@ -99,6 +103,7 @@ return (
          name="price"
          id="5"
          className="input"
+         value={books.price}
          onChange={e => setBooks({...books, price: e.target.value})}
         />
 
@@ -108,6 +113,7 @@ return (
          name="quantityInStock"
          id="6"
          className="input"
+         value={books.quantityInStock}
          onChange={e => setBooks({...books, quantityInStock: e.target.value})}
         />
 
@@ -117,6 +123,7 @@ return (
          name="authorName"
          id="7"
          className="input"
+         value={books.authorName}
          onChange={e => setBooks({...books, authorName: e.target.value})}
         />
 
