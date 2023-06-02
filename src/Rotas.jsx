@@ -6,6 +6,8 @@ import Book from "./Components/books/Book";
 import Purchase from "./Components/purchases/Purchase";
 import NewCLient from "./Components/clients/NewClient";
 import EditClient from "./Components/clients/EditClient";
+import NewBook from "./Components/books/NewBook";
+import EditBook from "./Components/books/EditBook";
 
 function Rotas() {
     return (
@@ -16,6 +18,8 @@ function Rotas() {
         <Route path="/clients/new" element={<NewCLient />} />
         <Route path="/clients/:clientId" element={<EditClient />} />
         <Route path="/books" element={<Book />} />
+        <Route path="/books/new" element={<NewBook />} />
+        <Route path="/books/:bookId" element={<EditBook />} />
         <Route path="/purchases" element={<Purchase />} />
         <Route path="/*" element={<Home />} />
     </Routes>

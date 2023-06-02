@@ -1,5 +1,72 @@
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { Navigate } from "react-router-dom";
+import { Link } from 'react-router-dom'
+import './Book.css'
+
 function Book() {
-    return <h1>Book</h1>
+
+    const [clicked, setClicked] = useState(false);
+    const [books, setBooks] = useState(null);
+
+    useEffect(() => {
+        axios.get('http://localhost:8080/books')
+        .then(response => setBooks(response.data))
+        .catch(error => console.log(error));
+    }, []);
+
+    return (
+        <div className="bookList">
+            <div className="tabela">
+                <table>
+                <thead>
+                    <tr className="itemList">
+                        <th>Título</th>
+                        <th>Sinopse</th>
+                        <th>ISBN</th>
+                        <th>Data de publicação</th>
+                        <th>Preço</th>
+                        <th>Quantidade em estoque</th>
+                        <th>Nome do autor</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {books && books.map(book =>(
+                        <tr className="itemList" key={book.id}>
+                            <td>{book.name}</td>
+                            <td>{book.synopsis}</td>
+                            <td>{book.verDepois}</td>
+                            <td>{book.date}</td>
+                            <td>{book.price}</td>
+                            <td>{book.quantity}</td>
+                            <td>{book.author}</td>
+                            <td className='icon'>
+                                <Link to={`/books/${book.uuid}`}>
+                                <img src='/edit.svg' alt='edit icon' />
+                                </Link>
+                            </td>
+                            <td className='icon'> 
+                                <Link to={`/books/${book.uuid}/delete`}>
+                                <img src='/delete.svg' alt='delete icon' />
+                                </Link>
+                            </td>
+                        </tr>
+                    ))}
+                </tbody>
+                </table>
+            </div>
+            <div className="buttons">
+                <button onClick={() => {
+                    setClicked(true);
+                }} id="bNewBook" > Novo Livro</button>
+                {clicked && <Navigate replace to="/books/new"/>}
+            </div>                
+
+        </div>
+
+    )
 }
 
 export default Book;
