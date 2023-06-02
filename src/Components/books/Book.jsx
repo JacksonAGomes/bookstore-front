@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom'
 import './Book.css'
 
 function Book() {
-
     const [clicked, setClicked] = useState(false);
     const [books, setBooks] = useState(null);
 
@@ -35,13 +34,13 @@ function Book() {
                 <tbody>
                     {books && books.map(book =>(
                         <tr className="itemList" key={book.id}>
-                            <td>{book.name}</td>
+                            <td>{book.title}</td>
                             <td>{book.synopsis}</td>
-                            <td>{book.verDepois}</td>
-                            <td>{book.date}</td>
+                            <td>{book.isbn}</td>
+                            <td>{book.publicationYear.split('T')[0]}</td>
                             <td>{book.price}</td>
-                            <td>{book.quantity}</td>
-                            <td>{book.author}</td>
+                            <td>{book.quantityInStock}</td>
+                            <td>{book.authorName}</td>
                             <td className='icon'>
                                 <Link to={`/books/${book.uuid}`}>
                                 <img src='/edit.svg' alt='edit icon' />
