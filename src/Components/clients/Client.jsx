@@ -38,8 +38,16 @@ function Client() {
                   <td>{client.age}</td>
                   <td>{client.gender}</td>
                   <td>{client.telephone}</td>
-                  <td><Link to={`/clients/${client.uuid}`}>EDIT</Link></td>
-                  <td><Link to={`/clients/${client.uuid}/delete`}>DEL</Link></td>
+                  <td className='icon'>
+                    <Link to={`/clients/${client.uuid}`}>
+                      <img src='/edit.svg' alt='edit icon' />
+                    </Link>
+                  </td>
+                  <td className='icon'> 
+                    <Link to={`/clients/${client.uuid}/delete`}>
+                      <img src='/delete.svg' alt='delete icon' />
+                    </Link>
+                  </td>
                 </tr>
               ))}
             </tbody>
