@@ -1,4 +1,4 @@
-
+import './DeleteClient.css'
 import React, { useState, useEffect } from "react";
 import { Navigate, useParams } from "react-router-dom";
 import axios from "axios";

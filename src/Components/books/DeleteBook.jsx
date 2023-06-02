@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Navigate, useParams } from "react-router-dom";
 import { toast, ToastContainer } from 'react-toastify';
 import axios from "axios";
+import './DeleteBook.css'
 
 
 
@@ -53,8 +54,8 @@ const deleteBook = () => {
 }
 
 return (
-    <div>
-        <h1>Deseja deletar?</h1>
+    <div className="book">
+        <h1 id="nBook">Deseja deletar?</h1>
 
         <input 
          type="name" 
