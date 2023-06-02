@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Navigate, useParams } from "react-router-dom";
 import { toast, ToastContainer } from 'react-toastify';
 import axios from "axios";
+import './EditBook.css';
 
 
 
@@ -38,7 +39,7 @@ function EditBook(){
 const updateBook = () => {
     axios.put(`http://localhost:8080/books/${bookId}`, books)
       .then(response => {
-        toast.success('Cliente salvo com sucesso!', {
+        toast.success('Livro salvo com sucesso!', {
           position: toast.POSITION.BOTTOM_RIGHT
         });
         setTimeout(() => {
@@ -53,8 +54,8 @@ const updateBook = () => {
 }
 
 return (
-    <div>
-        <h1>Novo Livro</h1>
+    <div className="book">
+        <h1 className="nBook">Novo Livro</h1>
 
         <input 
          type="name" 
