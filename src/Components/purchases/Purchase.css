@@ -2,3 +2,20 @@
     display: flex;
     justify-content: space-between;
 }
+
+.purchase {
+    text-align: center;
+  }
+  
+  .login {
+    text-align: center;
+  }
+  
+  .login-link {
+    color: #8a0808;
+    font-weight: bold;
+    margin-top: -50px; 
+  }
+  
+
+  
