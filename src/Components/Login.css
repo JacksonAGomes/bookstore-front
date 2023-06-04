@@ -9,6 +9,7 @@
   .text1,
   .text2,
   .text3 {
+    text-align: start;
     margin-left: 5px;
   }
   

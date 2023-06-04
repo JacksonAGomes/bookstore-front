@@ -11,7 +11,7 @@ function Login() {
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
   const { setUser } = useContext(LoginContexto);
-  var userLogged = { email: 'jacksonanderson@gmail.com', nome: 'Jackson Anderson', id: '1' };
+  var userLogged = { email: 'jacksonanderson@gmail.com', nome: 'Irla Arruda', id: 'cdc3c85e-0271-47c1-8554-ce58a21f1963' };
 
   const handleLogin = () => {
     if (email === 'irla@gmail.com' && senha === '123') {
