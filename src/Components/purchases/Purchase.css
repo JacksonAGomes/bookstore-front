@@ -1,21 +1,35 @@
-.login {
-    display: flex;
-    justify-content: space-between;
+.purchaseList{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.purchase {
-    text-align: center;
-  }
-  
-  .login {
-    text-align: center;
-  }
-  
-  .login-link {
-    color: #8a0808;
-    font-weight: bold;
-    margin-top: -50px; 
-  }
-  
+.login {
+  display: flex;
+  justify-content: space-between;
+}
+
+.login {
+  text-align: center;
+}
+
+.login-link {
+  color: #8a0808;
+  font-weight: bold;
+  margin-top: -50px; 
+}
+
+#bNCompra{
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+  height: 38px;
+  width: 110px;
+}
+
+#nome{
+  margin-left: 5px;
+  text-align: start;
+}
 
   
